@@ -2,10 +2,13 @@ services:
   - type: web
     name: sohibmulk-bot
     runtime: python
+    build:
+      environment: python
+      pythonVersion: 3.10.13
     buildCommand: ""
     startCommand: python main.py
     envVars:
       - key: BOT_TOKEN
-        value: "PASTE_YOUR_TELEGRAM_BOT_TOKEN_HERE"
+        value: "8317409742:AAG1Y_3ze0EGij1zADwrI4up9NNTmelq2ng"
       - key: TZ
         value: "Asia/Dushanbe"

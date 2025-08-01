@@ -3,6 +3,7 @@ services:
     name: sohibmulk-bot
     runtime: python
     build:
+      environment: python
       pythonVersion: 3.10.13
     buildCommand: ""
     startCommand: python main.py

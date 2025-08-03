@@ -5,7 +5,6 @@ services:
     plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
-    runtime: python
     pythonVersion: 3.10.13
     envVars:
       - key: BOT_TOKEN

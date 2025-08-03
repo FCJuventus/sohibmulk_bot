@@ -12,4 +12,3 @@ services:
         value: "PASTE_YOUR_TELEGRAM_BOT_TOKEN_HERE"
       - key: TZ
         value: "Asia/Dushanbe"
-        

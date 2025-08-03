@@ -1,13 +1,14 @@
 from aiogram import Bot, Dispatcher, types
-import asyncio, os
+import asyncio
+import os
 
-TOKEN = os.getenv("BOT_TOKEN")
-bot = Bot(token=TOKEN)
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 @dp.message()
-async def echo(message: types.Message):
-    await message.answer("👋 Бот успешно работает!")
+async def echo_handler(message: types.Message) -> None:
+    await message.answer(message.text)
 
 async def main():
     await dp.start_polling(bot)

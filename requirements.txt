@@ -1,0 +1,5 @@
+--prefer-binary
+aiogram==3.4.1
+aiohttp
+aiosqlite
+pydantic==2.5.3

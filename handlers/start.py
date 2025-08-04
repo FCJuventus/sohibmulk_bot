@@ -1,12 +1,9 @@
-
 from aiogram import Router
 from aiogram.types import Message
-from aiogram.filters import Command
-from keyboards.main_menu import get_main_menu
+from aiogram.filters import CommandStart
 
-router = Router()
+start_router = Router()
 
-@router.message(Command("start"))
-async def start_command(message: Message):
-    menu = get_main_menu(message.from_user.id)
-    await message.answer("👋 Добро пожаловать! Выберите действие из меню ниже:", reply_markup=menu)
+@start_router.message(CommandStart())
+async def cmd_start(message: Message):
+    await message.answer("👋 Привет! Я бот Sohibmulk, чем могу помочь?")

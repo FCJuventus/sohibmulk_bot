@@ -1,11 +1,11 @@
-from .start import start_handler
-from .user import user_command_handler
-from .admin import admin_command_handler
-from .help import help_command_handler
+from .start import start_router
+from .user import user_router
+from .admin import admin_router
+from .help import help_router
 
 __all__ = [
-    "start_handler",
-    "user_command_handler",
-    "admin_command_handler",
-    "help_command_handler"
+    "start_router",
+    "user_router",
+    "admin_router",
+    "help_router"
 ]

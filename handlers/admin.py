@@ -331,3 +331,8 @@ async def get_location(message: Message, state: FSMContext):
     await state.update_data(longitude=message.location.longitude)
     await state.set_state(FSMAdmin.confirm)
     await message.answer("✅ Локация получена. Подтвердите добавление объекта.")
+
+@router.message(Command("cancel"))
+async def cancel_fsm(message: Message, state: FSMContext):
+    await state.clear()
+    await message.answer("❌ Добавление объекта отменено.")
